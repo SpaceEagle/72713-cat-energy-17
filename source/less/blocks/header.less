@@ -1,0 +1,27 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+  max-width: @desktop;
+  margin: 0 auto;
+  text-align: center;
+}
+.page-header__logo {
+  padding-right: 65px; 
+}
+.page-header__logo-image {
+  width: 190px;
+  margin: 10px 0;
+}
+@media (min-width: @tablet) {
+  .page-header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop) {
+  .page-header {
+    padding: 12px 0;
+  }
+}

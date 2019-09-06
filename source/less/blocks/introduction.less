@@ -1,0 +1,134 @@
+.introduction {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 25px 20px 0;
+  text-align: center;
+  color: @white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 305px;
+    background-color: @green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+     background-size: cover;
+    z-index: -1;
+  }
+}
+.introduction__title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  .font (36px; 36px; 400);
+}
+.introduction__tagline {
+  margin-bottom: 15px;
+  .font (14px; 14px);
+  text-transform: @capital;
+}
+.introduction__image {
+  width: 280px;
+  height: auto;
+  margin-top: 14px;
+  margin-bottom: 2px;
+  align-self: center;
+}
+
+@media (min-width: @tablet) {
+  .introduction {
+    align-items: flex-start;
+    margin: 0 auto 478px;
+    padding: 30px 120px;
+    text-align: left;
+    color: @black;
+
+    &::before {
+      background: none;
+    }
+  }
+  .introduction__title {
+    margin-bottom: 42px;
+    width: 420px;
+    .font (60px; 60px);
+  }
+  .introduction__tagline {
+    margin-bottom: 48px;
+    .font (20px; 20px);
+  }
+
+  .introduction__image {
+    position: absolute;
+    top: 218px;
+    left: 113px;
+    /*left: calc(50% - 355px);*/
+    width: 625px;
+    z-index: -1;
+  }
+
+  .introduction__program {
+    padding: 15px 27px;
+    width: 192px;
+    .font (20px; 20px);
+  }
+}
+
+@media (min-width: @desktop) {
+  .introduction {
+    max-width: @desktop;
+    margin-bottom: 240px;
+    padding-left: 190px;
+
+    &::before {
+      top: -172px;
+      left: 50%;
+      width: 50vw;
+      min-height: 696px;
+      overflow: hidden;
+      background-color: @green;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .introduction {
+    max-width: @desktop;
+    padding-left: 190px;
+    margin-bottom: 240px;
+
+    &::before {
+      top: -172px;
+      left: 50%;
+      width: 50vw;
+      min-height: 696px;
+      overflow: hidden;
+      background-color: @green;
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: cover;
+    }
+  }
+
+  .introduction__title {
+    margin-top: 20px;
+  }
+
+  .introduction__tagline {
+    margin-bottom: 56px;
+  }
+
+  .introduction__image {
+    width: 552px;
+    top: -44px;
+    left: 560px;
+  }
+}

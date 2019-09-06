@@ -1,0 +1,76 @@
+.additional {
+  display: flex;
+  flex-direction: column;
+  margin: 18px 20px;
+}
+.additional__title {
+  position: relative;
+  display: flex;
+  margin: 10px auto 34px 0;
+  padding: 0;
+  .font (24px; 24px);
+  color: @black;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: calc(-100vw - 20px);
+    width: 100vw;
+    height: 3px;
+    background-color: @green;
+ }
+}
+.additional__list {
+  .for-ul ();
+  margin-bottom: 24px;
+}
+.additional__item {
+  padding: 12px 0 16px;
+  border-top: 1px solid @light-gray;
+
+  &:last-child {
+    border-bottom: 1px solid @gray-2;
+  }
+}
+.additional__item-title {
+  margin: 0 0 8px;
+  .font (16px; 20px);
+  color: @black;
+  text-transform: @capital;
+}
+.additional__item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .for-ul ();
+  margin-bottom: 14px;
+}
+.additional__item-description {
+  font-family: @font-info;
+  .font (14px; 14px);
+}
+.additional__info {
+  position: relative;
+  padding: 186px 58px 43px;
+  font-family: @font-info;
+  .font (16px; 20px);
+  text-align: center;
+  color: @white;
+  background-color: @green;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: calc(50% - 28px);
+    width: 56px;
+    height: 61px;
+    background-image: url("../img/icon-gift.svg");
+  }
+}
