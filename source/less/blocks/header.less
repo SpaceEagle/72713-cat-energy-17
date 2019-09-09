@@ -1,12 +1,11 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  max-width: @desktop;
+  width: 320px;
   margin: 0 auto;
-  text-align: center;
 }
 .page-header__logo {
-  padding-right: 65px; 
+  padding-right: 65px;
 }
 .page-header__logo-image {
   width: 190px;
@@ -17,11 +16,13 @@
     flex-direction: row;
     justify-content: space-between;
     text-align: left;
+    width: @tablet;
   }
 }
 
 @media (min-width: @desktop) {
   .page-header {
+    width: @desktop;
     padding: 12px 0;
   }
 }

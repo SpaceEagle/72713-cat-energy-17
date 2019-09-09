@@ -72,7 +72,7 @@
   padding-top: 0;
   padding-bottom: 0;
 }
-.example__button {
+.example__text {
   margin: 0 18px;
   padding: 0;
   font-family: @font-main;
@@ -80,7 +80,6 @@
   color: @black;
   text-transform: @capital;
   background-color: transparent;
-  border: none;
   cursor: pointer;
 }
 .example__toggle-bar {
@@ -196,7 +195,7 @@
     margin: -100px 70px 0;
   }
 
-  .example__button {
+  .example__text {
     z-index: 1;
     margin: 0;
     padding: 6px 0;
@@ -261,5 +260,111 @@
         left: 11px;
       }
     }
+  }
+}
+
+@media (min-width: @desktop) {
+  .example {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 58px 0 0;
+    border: none;
+  }
+
+  .example__title {
+    margin: 0 110px 76px;
+  }
+
+  .example__description {
+    width: 440px;
+    margin: 0 110px 54px;
+    padding: 70px 0 42px;
+  }
+
+  .example__data {
+    margin-bottom: 0;
+    justify-content: left;
+  }
+
+  .example__description {
+    background-color: @light-gray;
+  }
+
+  .example__expenses {
+    width: auto;
+    margin: 28px 0;
+
+    text-align: left;
+  }
+
+  .example__money {
+    margin-left: 60px;
+  }
+
+  .example__slider-block {
+    width: 50%;
+    margin-top: -190px;
+    margin-right: 32px;
+  }
+
+  .example__slider {
+    padding-left: 0;
+
+    &::before {
+      top: 190px;
+      left: -100vw;
+
+      width: 200vw;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 190px;
+      right: -99vw;
+
+      width: 100vw;
+      height: 462px;
+
+      background-color: #eaeaea;
+    }
+  }
+
+  .example__slider-item {
+    height: 652px;
+    width: 386px;
+
+    &--after {
+      &::before {
+        top: 190px;
+        left: 0;
+
+        width: 100vw;
+      }
+    }
+  }
+
+  .example__picture {
+    position: absolute;
+
+    top: 0;
+    right: 44px;
+
+    &--after {
+      right: auto;
+      left: -364px;
+    }
+  }
+
+  .example__toggle {
+    margin-top: -102px;
+    margin-right: 76px;
+  }
+
+  .example__toggle-value {
+    top: 4px;
   }
 }
